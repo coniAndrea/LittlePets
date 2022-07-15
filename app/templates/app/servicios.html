@@ -1,0 +1,115 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+      $('.slider').bxSlider({
+          mode: 'fade',//horizontal, vertical, fade
+          auto: true,
+          pause: 2000
+      });
+    });
+</script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+{% endblock %}
+
+{% block contenido %}
+<!--  Stylesheet -->
+<link href="{% static 'app/css/style.css' %}" rel="stylesheet">
+<body>
+  
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase">Servicios</h6>
+                <h1 class="display-5 text-uppercase mb-0">Nuestros excelentes servicios</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-food display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">Alimentación De Mascotas</h5>
+                            <p>Aqui se encuentras diferentes tipos de comida para tu mascota.</p>
+                            <a class="text-primary text-uppercase" href="{% url 'alimento' %}">Ver Más<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-grooming display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">Cuidados E Higienes De Mascotas</h5>
+                            <p>Aqui se encuentras diferentes tipos de productos para el cuidado e higene para la salud tu mascota.</p>
+                            <a class="text-primary text-uppercase" href="">Ver Más<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-dog display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">Entretenimiento De Mascotas </h5>
+                            <p>Aqui se encuentras diferentes tipos de jugetes para que tu mascota se divierta.</p>
+                            <a class="text-primary text-uppercase" href="">Ver Más<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-cat display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">Vestuarios Y Accesorios De Mascotas </h5>
+                            <p>Aqui se encuentras diferentes tipos de vestuarios y accesorios  para tu mascota se vea fabulosa.</p>
+                            <a class="text-primary text-uppercase" href="">Ver Más<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-food display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">Snacks De Mascotas </h5>
+                            <p>Aqui se encuentras diferentes tipos de snacks para tu mascota disfrute de una tarde.</p>
+                            <a class="text-primary text-uppercase" href="">Ver Más<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-dog display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">Otros </h5>
+                            <p>Aqui se encuntran otros tipos de productos.</p>
+                            <a class="text-primary text-uppercase" href="">Ver Más<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+   <!-- Template Javascript -->
+   <script src="{% static 'app/js/main.js' %}"></script>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <!--Enlace css-->
+        <link href="{% static 'app/css/login_style.css' %}" rel="stylesheet">
+    <!--Enlace animación-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+</head>
+<body>
+    <main>
+        <section class="login-register">
+            <h1 class="animate__animated animate__backInLeft">Ingresar</h1>
+            <p>Usuario <input class="controls" type="text" name="usuario2" id="usuario2" placeholder="Ingrese su Nombre de Usuario"></p>
+            <p>Contraseña <input class="controls" type="password" name="password2" id="password2" placeholder="Ingrese su Contraseña"></p>
+            <input class="botons" type="submit" value="Ingresar">
+            <p><a href="{% url 'registro' %}">¿No tienes Cuenta?, Registrate</a></p>
+        </section>
+    </main>
+</body>
+</html>
